@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Core.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace DataAccess.Repositories.Interfaces;
 public interface IRepository<T> where T : class, new()
 {
     IQueryable<T> GetAll();
-    T GetById(int id/*, bool isTracking = false*/);
+    Task<T?> GetById(int id);
     //IQueryable<T> FindByCondition(Expression<Func<T,bool>> expression,bool isTracking=false);
     Task CreateAsync(T entity);
     void Update(T entity);

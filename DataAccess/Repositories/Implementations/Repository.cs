@@ -30,13 +30,13 @@ namespace DataAccess.Repositories.Implementations
             return _table.AsQueryable();
         }
 
-        public  T GetById(int id/*,bool isTracking=false*/)
+        public async  Task<T?> GetById(int id)
         {
             //if(isTracking)
             //{ 
             //    return _table.AsQueryable();
             //}
-            return _table.Find(id);
+            return await _table.FindAsync(id);
         }
         public async Task CreateAsync(T entity)
         {

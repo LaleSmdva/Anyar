@@ -1,0 +1,24 @@
+﻿@using Core.Entities;
+@model Employee
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<form method="post">
+	<div style="display:flex;justify-content:center;margin-top:30px">
+
+
+
+		<img style="margin-top:150px" src="~/assets/img/team/@Model.Image" height="100px" />
+
+		<div style="position:absolute;left:100px; top:200px;">
+		
+			<p>DEscription:@Model.Name</p>
+			<p>DEscription:@Model.Description</p>
+		</div>
+
+	</div>
+	<button class="btn btn-primary" type="submit" value="Submit" style="margin-left:150px">Submit</button>
+
+</form>
+

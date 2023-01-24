@@ -2,6 +2,7 @@
 using Business.Services.Interfaces;
 using Business.Utilities;
 using Core.Entities;
+using Core.Interfaces;
 using DataAccess.Contexts;
 using DataAccess.Repositories.Interfaces;
 using Microsoft.AspNetCore.Hosting;
@@ -17,17 +18,17 @@ namespace Business.Services.Implementations;
 public class EmployeeService : IEmployeeService
 {
     private readonly IEmployeeRepository _employeeRepository;
-    private readonly IHostingEnvironment _env;
+    private readonly IWebHostEnvironment _env;
     private readonly AppDbContext _context;
 
-    public EmployeeService(IEmployeeRepository employeeRepository, IHostingEnvironment env, AppDbContext context)
-    {
-        _employeeRepository = employeeRepository;
-        _env = env;
-        _context = context;
-    }
+	public EmployeeService(IEmployeeRepository employeeRepository, AppDbContext context, IWebHostEnvironment env)
+	{
+		_employeeRepository = employeeRepository;
+		_context = context;
+		_env = env;
+	}
 
-    public  async Task CreateAsync(CreateEmployeeDto entity)
+	public  async Task CreateAsync(CreateEmployeeDto entity)
     {
         var fileName = await entity.Image.CopyFileAsync(_env.WebRootPath,"assets", "img","team");
         Employee employee = new()
@@ -43,9 +44,11 @@ public class EmployeeService : IEmployeeService
  
     }
 
-    public void Delete(int id)
+    public async void Delete(int id)
     {
-        throw new NotImplementedException();
+        var model=await _employeeRepository.GetById(id);
+        _employeeRepository.Delete(model);
+        await _employeeRepository.SaveAsync();
     }
 
     public IEnumerable<GetEmployeeDto> GetAll()
@@ -58,19 +61,15 @@ public class EmployeeService : IEmployeeService
 
     public async Task Update(int id,UpdateEmployeeDto entity)
     {
-        var model= _employeeRepository.GetById(id);
-        //if (model == null) return Bad
+        var model= await _employeeRepository.GetById(id);
 
-        //var model = _employeeRepository.Update(entity);
-
-        var filename = await entity.Image.CopyFileAsync(_env.WebRootPath, "assets", "img","team");
+        var filename = await entity.Image.CopyFileAsync(_env.WebRootPath,"assets","img","team");
         model.Name = entity.Name;
         model.Position = entity.Position;
         model.Description = entity.Description;
         model.Image = filename;
 
         _employeeRepository.Update(model);
-        await _employeeRepository.SaveAsync();
     }
     public async Task SaveAsync()
     {
@@ -79,8 +78,8 @@ public class EmployeeService : IEmployeeService
 
     public async Task<Employee> GetById(int id)
     {
-        return _employeeRepository.GetById(id);
-
+        return await _employeeRepository.GetById(id);
+       
     }
 
 

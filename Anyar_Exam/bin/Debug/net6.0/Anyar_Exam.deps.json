@@ -9,7 +9,7 @@
       "Anyar_Exam/1.0.0": {
         "dependencies": {
           "Business": "1.0.0",
-          "DataAccess": "1.0.0",
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.2.0",
           "Microsoft.EntityFrameworkCore.Design": "6.0.12",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.11"
         },
@@ -2504,6 +2504,7 @@
         "dependencies": {
           "DataAccess": "1.0.0",
           "Microsoft.AspNetCore.Hosting": "2.2.7",
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.2.0",
           "Microsoft.AspNetCore.Http.Features": "5.0.17",
           "Microsoft.EntityFrameworkCore": "6.0.12",
           "Microsoft.Extensions.Hosting": "6.0.1"
@@ -2513,6 +2514,9 @@
         }
       },
       "Core/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.2.0"
+        },
         "runtime": {
           "Core.dll": {}
         }
@@ -2522,6 +2526,7 @@
           "Core": "1.0.0",
           "FluentValidation": "11.4.0",
           "FluentValidation.DependencyInjectionExtensions": "11.4.0",
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.2.0",
           "Microsoft.EntityFrameworkCore": "6.0.12",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.12"
         },
