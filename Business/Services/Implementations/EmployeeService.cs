@@ -2,6 +2,7 @@
 using Business.Services.Interfaces;
 using Business.Utilities;
 using Core.Entities;
+using DataAccess.Contexts;
 using DataAccess.Repositories.Interfaces;
 using Microsoft.AspNetCore.Hosting;
 using System;
@@ -16,11 +17,13 @@ public class EmployeeService : IEmployeeService
 {
     private readonly IEmployeeRepository _employeeRepository;
     private readonly IHostingEnvironment _env;
+    private readonly AppDbContext _context;
 
-    public EmployeeService(IEmployeeRepository employeeRepository, IHostingEnvironment env)
+    public EmployeeService(IEmployeeRepository employeeRepository, IHostingEnvironment env, AppDbContext context)
     {
         _employeeRepository = employeeRepository;
         _env = env;
+        _context = context;
     }
 
     public  async Task CreateAsync(CreateEmployeeDto entity)
@@ -33,7 +36,7 @@ public class EmployeeService : IEmployeeService
             Image=fileName
         };
 
-        await _employeeRepository.Create(employee);
+        await _employeeRepository.CreateAsync(employee);
         await _employeeRepository.SaveAsync();
  
     }
@@ -54,9 +57,21 @@ public class EmployeeService : IEmployeeService
     }
 
 
-    public void Update(UpdateEmployeeDto entity)
+    public async Task Update(int id,UpdateEmployeeDto entity)
     {
-        throw new NotImplementedException();
+        var model=_employeeRepository.GetById(id).AsEnumerable();
+        //if (model == null) return BadRequest();
+
+
+        //var model = _employeeRepository.Update(entity);
+
+        var filename = await entity.Image.CopyFileAsync(_env.WebRootPath, "assets", "img");
+        model.Name = entity.Name;
+        model.Position = entity.Position;
+        model.Description = entity.Description;
+        model.Image = filename;
+
+        //_employeeService.Update(model);
     }
     public async Task SaveAsync()
     {

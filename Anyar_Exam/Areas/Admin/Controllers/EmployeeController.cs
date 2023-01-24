@@ -52,17 +52,10 @@ namespace Anyar_Exam.Areas.Admin.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Update(UpdateEmployeeDto updateEmployeeDto ,int id)
+        public async Task<IActionResult> Update(int id,UpdateEmployeeDto updateEmployeeDto )
         {
-            var model = await _context.Employees.FindAsync(id);
-
-            var filename = await updateEmployeeDto.Image.CopyFileAsync(_env.WebRootPath,"assets","img");
-           model.Name= updateEmployeeDto.Name;
-            model.Position=updateEmployeeDto.Position;
-            model.Description=updateEmployeeDto.Description;
-            model.Image = filename;
-
-            await _employeeService.SaveAsync();
+         
+            //await _employeeService.SaveAsync();
             return RedirectToAction(nameof(Index));
         }
     }

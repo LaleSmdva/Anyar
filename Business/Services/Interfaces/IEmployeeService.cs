@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace Business.Services.Interfaces;
 
@@ -12,7 +13,7 @@ public interface IEmployeeService
     IEnumerable<GetEmployeeDto> GetAll();
     GetEmployeeDto GetById(int id);
     Task CreateAsync(CreateEmployeeDto entity);
-    void Update(UpdateEmployeeDto entity);
+    Task Update(int id,UpdateEmployeeDto entity);
     void Delete(int id);
     Task SaveAsync();
 

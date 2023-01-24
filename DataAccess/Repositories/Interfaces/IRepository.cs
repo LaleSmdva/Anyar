@@ -10,10 +10,10 @@ namespace DataAccess.Repositories.Interfaces;
 public interface IRepository<T> where T : class, new()
 {
     IQueryable<T> GetAll();
-    T GetById(int id);
-    Task Create(T entity);
+    IQueryable<T> GetById(int id);
+    Task CreateAsync(T entity);
     void Update(T entity);
-    void Delete(int id);
+    void Delete(T entity);
     DbSet<T> _table { get; }
     Task SaveAsync();
 
