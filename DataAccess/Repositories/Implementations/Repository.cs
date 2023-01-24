@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -29,13 +30,13 @@ namespace DataAccess.Repositories.Implementations
             return _table.AsQueryable();
         }
 
-        public IQueryable<T> GetById(int id,bool isTracking=false)
+        public  T GetById(int id/*,bool isTracking=false*/)
         {
-            if(isTracking)
-            { 
-                return _table.AsQueryable();
-            }
-            return _table.AsQueryable().AsNoTracking();
+            //if(isTracking)
+            //{ 
+            //    return _table.AsQueryable();
+            //}
+            return _table.Find(id);
         }
         public async Task CreateAsync(T entity)
         {
@@ -57,5 +58,14 @@ namespace DataAccess.Repositories.Implementations
         {
            await _context.SaveChangesAsync();
         }
+
+        //public IQueryable<T> FindByCondition(Expression<Func<T, bool>> expression, bool isTracking = false)
+        //{
+        //    if(isTracking)
+        //    {
+        //        return _table.Where(expression);
+        //    }
+        //    return _table.Where(expression).AsNoTracking();
+        //}
     }
 }

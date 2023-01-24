@@ -1,0 +1,14 @@
+﻿@using Core.Entities;
+@model Employee
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div>
+    <p>@Model.Name</p>
+    <p>@Model.Position</p>
+    <p>@Model.Description</p>
+    <p>@Model.Image</p>
+    <img src="~/assets/img/team/@Model.Image"/>
+</div>
+

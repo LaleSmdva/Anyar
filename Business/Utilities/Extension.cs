@@ -13,12 +13,16 @@ public static class Extension
     public static  async Task<string> CopyFileAsync(this IFormFile file,string wwwroot,params string[] folders)
     {
         var path = wwwroot;
-        var fileName=Guid.NewGuid().ToString()+file.Name;
+        var fileName=Guid.NewGuid().ToString()+file.FileName;
         foreach (var folder in folders)
         {
             path = Path.Combine(path, folder);
         }
         path=Path.Combine(path, fileName);
+        using(FileStream stream=new(path,FileMode.Create))
+        {
+            await file.CopyToAsync(stream);
+        }
         return fileName;
     }
 

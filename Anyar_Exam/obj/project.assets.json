@@ -11244,24 +11244,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ClassTime\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ClassTime\\Desktop\\Anyar_Exam\\Anyar_Exam\\Anyar_Exam.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\Bilet_Anyar\\Anyar\\Anyar_Exam\\Anyar_Exam.csproj",
       "projectName": "Anyar_Exam",
-      "projectPath": "C:\\Users\\ClassTime\\Desktop\\Anyar_Exam\\Anyar_Exam\\Anyar_Exam.csproj",
-      "packagesPath": "C:\\Users\\ClassTime\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ClassTime\\Desktop\\Anyar_Exam\\Anyar_Exam\\obj\\",
+      "projectPath": "C:\\Users\\User\\Desktop\\Bilet_Anyar\\Anyar\\Anyar_Exam\\Anyar_Exam.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\Bilet_Anyar\\Anyar\\Anyar_Exam\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\ClassTime\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11275,11 +11270,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\ClassTime\\Desktop\\Anyar_Exam\\Business\\Business.csproj": {
-              "projectPath": "C:\\Users\\ClassTime\\Desktop\\Anyar_Exam\\Business\\Business.csproj"
+            "C:\\Users\\User\\Desktop\\Bilet_Anyar\\Anyar\\Business\\Business.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\Bilet_Anyar\\Anyar\\Business\\Business.csproj"
             },
-            "C:\\Users\\ClassTime\\Desktop\\Anyar_Exam\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\ClassTime\\Desktop\\Anyar_Exam\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\User\\Desktop\\Bilet_Anyar\\Anyar\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\User\\Desktop\\Bilet_Anyar\\Anyar\\DataAccess\\DataAccess.csproj"
             }
           }
         }
@@ -11324,7 +11319,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

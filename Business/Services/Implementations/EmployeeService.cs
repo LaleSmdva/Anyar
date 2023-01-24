@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -28,11 +29,12 @@ public class EmployeeService : IEmployeeService
 
     public  async Task CreateAsync(CreateEmployeeDto entity)
     {
-        var fileName = await entity.Image.CopyFileAsync(_env.WebRootPath,"assets", "img");
+        var fileName = await entity.Image.CopyFileAsync(_env.WebRootPath,"assets", "img","team");
         Employee employee = new()
         {
             Name = entity.Name,
             Position = entity.Position,
+            Description= entity.Description,
             Image=fileName
         };
 
@@ -51,30 +53,40 @@ public class EmployeeService : IEmployeeService
         throw new NotImplementedException();
     }
 
-    public GetEmployeeDto GetById(int id)
-    {
-        throw new NotImplementedException();
-    }
+ 
 
 
     public async Task Update(int id,UpdateEmployeeDto entity)
     {
-        var model=_employeeRepository.GetById(id).AsEnumerable();
-        //if (model == null) return BadRequest();
-
+        var model= _employeeRepository.GetById(id);
+        //if (model == null) return Bad
 
         //var model = _employeeRepository.Update(entity);
 
-        var filename = await entity.Image.CopyFileAsync(_env.WebRootPath, "assets", "img");
+        var filename = await entity.Image.CopyFileAsync(_env.WebRootPath, "assets", "img","team");
         model.Name = entity.Name;
         model.Position = entity.Position;
         model.Description = entity.Description;
         model.Image = filename;
 
-        //_employeeService.Update(model);
+        _employeeRepository.Update(model);
+        await _employeeRepository.SaveAsync();
     }
     public async Task SaveAsync()
     {
         await _employeeRepository.SaveAsync();
     }
+
+    public async Task<Employee> GetById(int id)
+    {
+        return _employeeRepository.GetById(id);
+
+    }
+
+
+    //public Task<List<GetEmployeeDto>> FindByConditionAsync(Expression<Func<Employee, bool>> expression)
+    //{
+    //    var model=_employeeRepository.FindByCondition(expression).ToList();
+
+    //}
 }

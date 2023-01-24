@@ -24,6 +24,11 @@ namespace Anyar_Exam.Areas.Admin.Controllers
         {
             return View(_context.Employees);
         }
+        public async Task<IActionResult> Detail(int id)
+        {
+            var model=await _context.Employees.FindAsync(id);
+            return View(model);
+        }
 
         public IActionResult Create()
         {
@@ -40,23 +45,24 @@ namespace Anyar_Exam.Areas.Admin.Controllers
 
         public async Task<IActionResult> Update(int id)
         {
-            var model=await _context.Employees.FindAsync(id);
-            UpdateEmployeeDto updateEmployeeDto = new()
+            var model=await _employeeService.GetById(id);
+            UpdateEmployeeDto employee = new()
             { 
-                Name=model.Name,
+                Name= model.Name,
                 Position=model.Position,
                 Description=model.Description
             };
 
-            return View(updateEmployeeDto);
+            return View(employee);
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Update(int id,UpdateEmployeeDto updateEmployeeDto )
+        public async Task<IActionResult> Update(int id,UpdateEmployeeDto entity)
         {
-         
-            //await _employeeService.SaveAsync();
+            await _employeeService.Update(id,entity);
+
             return RedirectToAction(nameof(Index));
         }
+    
     }
 }

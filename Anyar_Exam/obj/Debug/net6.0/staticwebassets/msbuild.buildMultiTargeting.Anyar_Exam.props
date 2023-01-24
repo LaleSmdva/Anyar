@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Anyar_Exam.props" />
+</Project>
