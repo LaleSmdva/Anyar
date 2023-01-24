@@ -84,7 +84,7 @@
     <!-- ======= Clients Section ======= -->
     <section id="clients" class="clients">
         <div class="container" data-aos="zoom-in">
-           
+
             <div class="clients-slider swiper">
                 <div class="swiper-wrapper align-items-center">
                     <div class="swiper-slide"><img src="~/assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
@@ -349,7 +349,7 @@
     <!-- ======= Team Section ======= -->
     <section id="team" class="team section-bg">
         <div class="container" data-aos="fade-up">
-           
+
             <div class="section-title">
                 <h2>Team</h2>
                 <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
@@ -357,27 +357,27 @@
 
             <div class="row">
 
-                        @foreach (var employee in Model)
-                        {
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="member d-flex align-items-start">
+                @foreach (var employee in Model)
+                {
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="member d-flex align-items-start">
 
-                        <div class="pic"><img src="~/assets/img/team/@employee.Image" class="img-fluid" alt=""></div>
-                        <div class="member-info">
-                            <h4>@employee.Name</h4>
-                            <span>@employee.Position</span>
-                            <p>@employee.Description</p>
-                            <div class="social">
-                                <a href=""><i class="ri-twitter-fill"></i></a>
-                                <a href=""><i class="ri-facebook-fill"></i></a>
-                                <a href=""><i class="ri-instagram-fill"></i></a>
-                                <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                            <div class="pic"><img src="~/assets/img/team/@employee.Image" class="img-fluid" alt=""></div>
+                            <div class="member-info">
+                                <h4>@employee.Name</h4>
+                                <span>@employee.Position</span>
+                                <p>@employee.Description</p>
+                                <div class="social">
+                                    <a href=""><i class="ri-twitter-fill"></i></a>
+                                    <a href=""><i class="ri-facebook-fill"></i></a>
+                                    <a href=""><i class="ri-instagram-fill"></i></a>
+                                    <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                        }
-              
+                }
+
 
             </div>
 
@@ -594,4 +594,3 @@
     </section><!-- End Contact Section -->
 
 </main><!-- End #main -->
-
