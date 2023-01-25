@@ -64,15 +64,21 @@ namespace Anyar_Exam.Areas.Admin.Controllers
 
 		public async Task<IActionResult> Update(int id)
 		{
+			var model=await _employeeService.GetById(id);
+			UpdateEmployeeDto updateEmployeeDto = new()
+			{
+				Name=model.Name,
+				Position=model.Position,
+				Description=model.Description
+			};
 			
-			return View();
+			return View(updateEmployeeDto);
 		}
 		[HttpPost]
 		[ValidateAntiForgeryToken]
 		public async Task<IActionResult> Update(int id, UpdateEmployeeDto entity)
 		{
 			await _employeeService.Update(id, entity);
-			await _employeeService.SaveAsync();
 
 			return RedirectToAction(nameof(Index));
 		}
@@ -128,7 +134,7 @@ namespace Anyar_Exam.Areas.Admin.Controllers
 			//await _context.SaveChangesAsync();
 			//return RedirectToAction(nameof(Index));
 			_employeeService.Delete(id);
-			await _employeeService.SaveAsync();
+			//await _employeeService.SaveAsync();
 			return RedirectToAction(nameof(Index));
 		}
 

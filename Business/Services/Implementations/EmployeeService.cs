@@ -48,6 +48,7 @@ public class EmployeeService : IEmployeeService
     {
         var model=await _employeeRepository.GetById(id);
         _employeeRepository.Delete(model);
+        await _employeeRepository.SaveAsync();
     }
 
     public IEnumerable<GetEmployeeDto> GetAll()
@@ -69,16 +70,12 @@ public class EmployeeService : IEmployeeService
         model.Image = filename;
 
         _employeeRepository.Update(model);
-    }
-    public async Task SaveAsync()
-    {
         await _employeeRepository.SaveAsync();
     }
-
+   
     public async Task<Employee> GetById(int id)
     {
         return await _employeeRepository.GetById(id);
-       
     }
 
 

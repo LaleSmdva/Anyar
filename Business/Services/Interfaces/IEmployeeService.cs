@@ -18,7 +18,6 @@ public interface IEmployeeService
     Task CreateAsync(CreateEmployeeDto entity);
     Task Update(int id,UpdateEmployeeDto entity);
     void Delete(int id);
-    Task SaveAsync();
 
 }
 // core dataccess business api 

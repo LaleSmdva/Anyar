@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tI/BU0zV923AzAkpoA3X8lmXeEVM52ojE+ud6+oPHfc=",
+  "Hash": "SsU9D+pRxRlX11B/yhueE4L+VCAjzkonayFygamD1o8=",
   "Source": "Anyar_Exam",
   "BasePath": "_content/Anyar_Exam",
   "Mode": "Default",
@@ -2975,6 +2975,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\portfolio\\portfolio-details-3.jpg"
     },
     {
+      "Identity": "C:\\Users\\User\\Desktop\\Bilet_Anyar\\Anyar\\Anyar_Exam\\wwwroot\\assets\\img\\team\\013ad71f-f33f-4226-9253-dbaeee4fc289team-3.jpg",
+      "SourceId": "Anyar_Exam",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Bilet_Anyar\\Anyar\\Anyar_Exam\\wwwroot\\",
+      "BasePath": "_content/Anyar_Exam",
+      "RelativePath": "assets/img/team/013ad71f-f33f-4226-9253-dbaeee4fc289team-3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\team\\013ad71f-f33f-4226-9253-dbaeee4fc289team-3.jpg"
+    },
+    {
       "Identity": "C:\\Users\\User\\Desktop\\Bilet_Anyar\\Anyar\\Anyar_Exam\\wwwroot\\assets\\img\\team\\0d037fa7-1549-45ee-9fd6-e2c67dd6bc93team-4.jpg",
       "SourceId": "Anyar_Exam",
       "SourceType": "Discovered",
@@ -2990,6 +3007,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\team\\0d037fa7-1549-45ee-9fd6-e2c67dd6bc93team-4.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\Bilet_Anyar\\Anyar\\Anyar_Exam\\wwwroot\\assets\\img\\team\\24ecd5bb-286f-458a-aaf8-56bbe055394cteam-2.jpg",
+      "SourceId": "Anyar_Exam",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Bilet_Anyar\\Anyar\\Anyar_Exam\\wwwroot\\",
+      "BasePath": "_content/Anyar_Exam",
+      "RelativePath": "assets/img/team/24ecd5bb-286f-458a-aaf8-56bbe055394cteam-2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\team\\24ecd5bb-286f-458a-aaf8-56bbe055394cteam-2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\Bilet_Anyar\\Anyar\\Anyar_Exam\\wwwroot\\assets\\img\\team\\2bea4ed1-433e-4445-9135-84e35d82a109team-2.jpg",
+      "SourceId": "Anyar_Exam",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Bilet_Anyar\\Anyar\\Anyar_Exam\\wwwroot\\",
+      "BasePath": "_content/Anyar_Exam",
+      "RelativePath": "assets/img/team/2bea4ed1-433e-4445-9135-84e35d82a109team-2.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\team\\2bea4ed1-433e-4445-9135-84e35d82a109team-2.jpg"
     },
     {
       "Identity": "C:\\Users\\User\\Desktop\\Bilet_Anyar\\Anyar\\Anyar_Exam\\wwwroot\\assets\\img\\team\\3901d040-6085-46b3-b096-402094c117d2team-3.jpg",
@@ -3024,6 +3075,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\team\\4684bacd-581b-4118-8bba-ce6a21c60256team-4.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\Bilet_Anyar\\Anyar\\Anyar_Exam\\wwwroot\\assets\\img\\team\\55ac35ff-9fce-430b-b72d-60fbde50cbcateam-4.jpg",
+      "SourceId": "Anyar_Exam",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Bilet_Anyar\\Anyar\\Anyar_Exam\\wwwroot\\",
+      "BasePath": "_content/Anyar_Exam",
+      "RelativePath": "assets/img/team/55ac35ff-9fce-430b-b72d-60fbde50cbcateam-4.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\team\\55ac35ff-9fce-430b-b72d-60fbde50cbcateam-4.jpg"
     },
     {
       "Identity": "C:\\Users\\User\\Desktop\\Bilet_Anyar\\Anyar\\Anyar_Exam\\wwwroot\\assets\\img\\team\\78bddb8f-5ee3-4e26-bcf4-a489491433c0team-3.jpg",
