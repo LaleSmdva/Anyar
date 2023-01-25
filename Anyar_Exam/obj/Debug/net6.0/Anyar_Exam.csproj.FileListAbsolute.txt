@@ -551,3 +551,10 @@ C:\Users\User\Desktop\Bilet_Anyar\Anyar\Anyar_Exam\obj\Debug\net6.0\scopedcss\bu
 C:\Users\User\Desktop\Bilet_Anyar\Anyar\Anyar_Exam\obj\Debug\net6.0\Anyar_Exam.csproj.CopyComplete
 C:\Users\User\Desktop\Bilet_Anyar\Anyar\Anyar_Exam\obj\Debug\net6.0\Anyar_Exam.genruntimeconfig.cache
 C:\Users\User\Desktop\Bilet_Anyar\Anyar\Anyar_Exam\obj\Debug\net6.0\ref\Anyar_Exam.dll
+C:\Users\User\Desktop\Bilet_Anyar\Anyar\Anyar_Exam\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\User\Desktop\Bilet_Anyar\Anyar\Anyar_Exam\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\User\Desktop\Bilet_Anyar\Anyar\Anyar_Exam\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\User\Desktop\Bilet_Anyar\Anyar\Anyar_Exam\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\User\Desktop\Bilet_Anyar\Anyar\Anyar_Exam\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\User\Desktop\Bilet_Anyar\Anyar\Anyar_Exam\obj\Debug\net6.0\Anyar_Exam.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\User\Desktop\Bilet_Anyar\Anyar\Anyar_Exam\bin\Debug\net6.0\FluentValidation.AspNetCore.dll

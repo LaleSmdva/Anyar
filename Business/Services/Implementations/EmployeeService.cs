@@ -21,11 +21,11 @@ public class EmployeeService : IEmployeeService
     private readonly IWebHostEnvironment _env;
     private readonly AppDbContext _context;
 
-	public EmployeeService(IEmployeeRepository employeeRepository, AppDbContext context, IWebHostEnvironment env)
+	public EmployeeService(IEmployeeRepository employeeRepository, IWebHostEnvironment env, AppDbContext context)
 	{
 		_employeeRepository = employeeRepository;
-		_context = context;
 		_env = env;
+		_context = context;
 	}
 
 	public  async Task CreateAsync(CreateEmployeeDto entity)
@@ -48,7 +48,6 @@ public class EmployeeService : IEmployeeService
     {
         var model=await _employeeRepository.GetById(id);
         _employeeRepository.Delete(model);
-        await _employeeRepository.SaveAsync();
     }
 
     public IEnumerable<GetEmployeeDto> GetAll()

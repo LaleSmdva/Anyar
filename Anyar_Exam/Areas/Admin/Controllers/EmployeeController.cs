@@ -64,21 +64,13 @@ namespace Anyar_Exam.Areas.Admin.Controllers
 
 		public async Task<IActionResult> Update(int id)
 		{
-			//var model = await _employeeService.GetById(id);
 			
-			//UpdateEmployeeDto employee = new()
-			//{
-			//	Name = model.Name,
-			//	Position = model.Position,
-			//	Description = model.Description
-			//};
 			return View();
 		}
 		[HttpPost]
 		[ValidateAntiForgeryToken]
 		public async Task<IActionResult> Update(int id, UpdateEmployeeDto entity)
 		{
-			//var model = await _employeeService.GetById(id);
 			await _employeeService.Update(id, entity);
 			await _employeeService.SaveAsync();
 
@@ -117,11 +109,11 @@ namespace Anyar_Exam.Areas.Admin.Controllers
 
 		public async Task<IActionResult> Delete(int id)
 		{
-			if (id == null) return BadRequest();
-			var model = await _context.Employees.FindAsync(id);
-			if (model == null) return BadRequest();
+			//if (id == null) return BadRequest();
+			//var model = await _context.Employees.FindAsync(id);
+			//if (model == null) return BadRequest();
 
-			return View(model);
+			return View(_context.Employees);
 		}
 		[HttpPost]
 		[ValidateAntiForgeryToken]
@@ -129,11 +121,14 @@ namespace Anyar_Exam.Areas.Admin.Controllers
 
 		public async Task<IActionResult> DeleteEmployee(int id)
 		{
-			if (id == null) return BadRequest();
-			var model = await _context.Employees.FindAsync(id);
-			if (model == null) return BadRequest();
-			_context.Employees.Remove(model);
-			await _context.SaveChangesAsync();
+			//if (id == null) return BadRequest();
+			//var model = await _context.Employees.FindAsync(id);
+			//if (model == null) return BadRequest();
+			//_context.Employees.Remove(model);
+			//await _context.SaveChangesAsync();
+			//return RedirectToAction(nameof(Index));
+			_employeeService.Delete(id);
+			await _employeeService.SaveAsync();
 			return RedirectToAction(nameof(Index));
 		}
 

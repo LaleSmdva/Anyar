@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wdxmeIlaksaOONrLEZQqWLYDWg2WhP8dayA+xt3vV0E=",
+  "Hash": "tI/BU0zV923AzAkpoA3X8lmXeEVM52ojE+ud6+oPHfc=",
   "Source": "Anyar_Exam",
   "BasePath": "_content/Anyar_Exam",
   "Mode": "Default",
@@ -3075,6 +3075,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\team\\ac9753bd-6ed6-47d9-9f79-d19d6864c877team-3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\User\\Desktop\\Bilet_Anyar\\Anyar\\Anyar_Exam\\wwwroot\\assets\\img\\team\\d77f91ef-9116-4ff0-9a37-374d54184377team-3.jpg",
+      "SourceId": "Anyar_Exam",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User\\Desktop\\Bilet_Anyar\\Anyar\\Anyar_Exam\\wwwroot\\",
+      "BasePath": "_content/Anyar_Exam",
+      "RelativePath": "assets/img/team/d77f91ef-9116-4ff0-9a37-374d54184377team-3.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\team\\d77f91ef-9116-4ff0-9a37-374d54184377team-3.jpg"
     },
     {
       "Identity": "C:\\Users\\User\\Desktop\\Bilet_Anyar\\Anyar\\Anyar_Exam\\wwwroot\\assets\\img\\team\\ecd200e9-8c8a-47fc-ac2b-cee4eedbea6fteam-1.jpg",

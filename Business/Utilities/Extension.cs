@@ -34,12 +34,14 @@ public static class Extension
 			path = Path.Combine(path, folder);
 		}
 		path = Path.Combine(path, fileName);
-		using(FileStream stream = new(path, FileMode.Create))
+		using (FileStream stream = new(path, FileMode.Create))
 		{
 			await file.CopyToAsync(stream);
 		};
 		return fileName;
 	}
+
+
 	//public static bool CheckFileSize(this IFormFile file, int kByte)
  //   {
  //       return file.Length > kByte;
